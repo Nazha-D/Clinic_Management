@@ -32,6 +32,18 @@ class Patient extends Model
     {
         return $this->hasMany(Invoice::class);
     }
+
+    public function prescriptions()
+{
+    return $this->hasManyThrough(
+       Prescription::class,
+       MedicalRecord::class,
+        'patient_id',       // foreign key on medical_records table...
+        'medical_record_id',// foreign key on prescriptions table...
+        'id',               // local key on patients
+        'id'                // local key on medical_records
+    );
+}
     
 }
 

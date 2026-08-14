@@ -3,14 +3,17 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
+use App\Enums\Specialities;
 class Doctor extends Model
 {
    protected $fillable=[
         'user_id','name','specialty','consultation_fee'
     ];
 
- 
+ protected $casts = [
+        'specialty' => Specialities::class, 
+        'consultation_fee' => 'decimal:2',
+    ]; 
   public function user()
   {
     return $this->belongsTo(User::class);
