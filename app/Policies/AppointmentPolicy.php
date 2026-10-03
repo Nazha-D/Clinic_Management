@@ -59,7 +59,7 @@ public function before(User $user):?bool
  /**
      * Determine whether the user hasPermissionTo change the status the model.
      */
-       public function change_status(User $user, Appointment $model): bool
+       public function changeStatus(User $user, Appointment $model): bool
     {
               return $user->hasPermissionTo('change_appointment_status');
     }
