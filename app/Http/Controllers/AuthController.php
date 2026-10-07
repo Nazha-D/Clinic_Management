@@ -22,6 +22,7 @@ public function register(StoreUserRequest $request)
 {
    
       $user= $this->authService->register($request->validated());
+     
       $message='User created successfully';
     return $this->successResponse($user,$message,201);
   

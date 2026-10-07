@@ -9,12 +9,23 @@ Built for practice purposes to apply clean code principles and Laravel best prac
 - Spatie Laravel Permission (Roles & Permissions)
 - MySQL
 
-## Features
-- Doctor and patient management
+## Project Status
+This project is actively under development. See below for what's done and what's coming.
+
+## ✅ Completed
+- Database design and migrations (all tables)
+- Roles & Permissions setup (Super Admin, Doctor, Receptionist, Accountant)
+- Authentication (register, login, logout, reset password, update profile)
+- Exception handling (centralized via bootstrap/app.php)
+- Feature tests for authentication
+
+## 🚧 In Progress / Coming Soon
+- Doctor management endpoints
+- Patient management endpoints
 - Appointment booking and tracking
-- Medical records with prescriptions
+- Medical records and prescriptions
 - Invoice and payment management
-- Role-based access control (Super Admin, Doctor, Receptionist, Accountant)
+- Reports
 
 ## Roles & Permissions
 | Role | Access |

@@ -33,6 +33,7 @@ public function login($data)
 
     if(Hash::check($data['password'],$user->password))
         {
+            $user->tokens()->delete();
             return $user->createToken('auth_token')->plainTextToken;
         }
         else 
